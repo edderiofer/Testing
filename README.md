@@ -1,7 +1,7 @@
 # Testing
 Trying to nail down a Python bug with hierarchies or something
 
-
+---
 OK, so here's how this repository is intended to work. `main.py` in the topmost level calls `firstlevel.secondlevel.firstdependency` two levels down. Then `firstlevel.secondlevel.firstdependency` is supposed to call `firstlevel.seconddependency` one level down (it doesn't actually, but pretend it does for now). Finally, `firstlevel.seconddependency` prints `SUCCESS`.
 
 The problem here is that this doesn't work, in part because `firstlevel.secondlevel.firstdependency` *actually* calls `seconddependency` instead of `firstlevel.seconddependency`.
